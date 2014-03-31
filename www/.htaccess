@@ -1,0 +1,13 @@
+RewriteEngine on
+
+RewriteCond     %{SERVER_PORT}   !^443$
+RewriteRule     (.*)             https://%{HTTP_HOST}/$1   [L]
+
+# Verwende Verzeichnis oder Datei, wenn sie vorhanden sind
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Leite andernfalls auf index.php um
+RewriteRule . index.php
+
+#Allow from All

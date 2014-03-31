@@ -1,0 +1,200 @@
+/* Responsive Mobile Signup Formular
+===============================================*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (min-width: 1200px) {
+  
+}
+@media (max-width: 979px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .container {
+    width: auto;
+  }
+  .row-fluid {
+    width: 100%;
+  }
+  .row {
+    margin-left: 0;
+  }
+  [class*="span"],
+  .uneditable-input[class*="span"],
+  .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .span12,
+  .row-fluid .span12 {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .row-fluid [class*="offset"]:first-child {
+    margin-left: 0;
+  }
+  .input-large,
+  .input-xlarge,
+  .input-xxlarge,
+  input[class*="span"],
+  select[class*="span"],
+  textarea[class*="span"],
+  .uneditable-input {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+  }
+  /*------------------------------------*/
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid #ccc;
+  }
+  .modal {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    margin: 0;
+  }
+  .modal.fade {
+    top: -100px;
+  }
+  .modal.fade.in {
+    top: 20px;
+  }
+  .modal-header .close {
+    padding: 10px;
+    margin: -10px;
+  }
+  .popover {
+    position: static;
+    margin: -8px 0 12px 0;
+    width: 100%;
+    max-width: 100%;
+    width: 99%;
+  }
+  .popover.right {
+    margin-left: 0;
+  }
+  .popover.right .paymey-arrow {
+    margin-top: -14px;
+    margin-left: -7px;
+    background-position: -22px -19px;
+    left: 50%;
+    top: 0;
+  }
+  .popover .paymey-arrow {
+    position: relative;
+  }
+  .popover .popover-content {
+    padding: 8px 14px 8px 14px;
+  }
+  /*------------------------------------*/.row.reg-bussiness,
+  .row.reg-private,
+  .row.reg-success,
+  .row.reg-error,
+  .row.start {
+    background: transparent;
+    height: auto;
+    padding-top: 0;
+  }
+  .visible-desktop {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+  #header > div > div,
+  #header header,
+  #header header nav,
+  .errorMessage {
+    width: auto;
+  }
+  .control-group {
+    margin-bottom: 20px;
+  }
+  input[class*="span"],
+  select[class*="span"] {
+    margin-left: 0px;
+  }
+  label span.pull-right {
+    float: left;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .checkboxfixed label span.pull-right {
+    font-size: 12px;
+  }
+  .row.reg-bussiness .span6.control-group .errorMessage,
+  .row.reg-private .span6.control-group .errorMessage {
+    margin-left: 0px;
+  }
+  #header.start,
+  footer {
+    margin: 0 -20px 10px -20px;
+    padding: 0 20px;
+  }
+  #header header nav {
+    right: 8px;
+  }
+  #modalChangeBIC {
+    margin-left: auto;
+    width: auto;
+  }
+  #modalChangeBIC a.btn.btn-block.btn-mini {
+    display: block;
+    width: 22px;
+    height: 22px;
+    float: right;
+  }
+  #modalChangeBIC a.btn.btn-block.btn-mini i {
+    display: block;
+    width: 100%;
+    height: 22px;
+    background: url(../pics/shared/glyphicons-halflings.png) no-repeat -285px 2px transparent;
+    opacity: 0.5;
+  }
+  #modalChangeBIC a.btn.btn-block.btn-mini i:hover {
+    opacity: 0.8;
+  }
+  #header .logo {
+    width: 164px;
+    padding-top: 35px;
+  }
+}

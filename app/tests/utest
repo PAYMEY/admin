@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#phpunit --colors --coverage-html ./report --stop-on-error --stop-on-error unit
+
+phpunit --colors --stop-on-error unit
+

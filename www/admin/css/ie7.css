@@ -1,0 +1,21 @@
+/*===============================================
+Description : Debug-Style-Sheet for Internet Explorer 7
+Version     : 2.00
+Author      : Rudolf Wohland
+Last changed: 17.11.11
+===============================================*/
+
+
+/* Resetting/adjusting of basic values
+===============================================*/
+sub, sup { font-size: 0.75em; }
+
+/* Subtemplates
+===============================================*/
+.row { padding: 0 1px 0 1px; }
+
+/* Forms
+===============================================*/
+input[type=checkbox], input[type=radio] {
+  margin: 0 3px 3px 3px;
+}
