@@ -1,0 +1,4 @@
+admin
+=====
+
+PAYMEY administration GUI
