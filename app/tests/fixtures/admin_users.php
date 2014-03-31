@@ -1,0 +1,33 @@
+<?php
+return array(
+ 'AdminUser_1' => array(
+        'id' => '1',
+        'email' => 'cv@attentra.de',
+        'password' => '$2a$13$NLcoaXq5E7ZNNKIMRuPn2OQDII234DSAdeed71PxQ4PoDaw.PdKPxW',
+        'name' => 'Christian Vollrath',
+        'status' => '1',
+        'login_attempts' => '0',
+        'locked_until' => '0',
+        'pass_created' => '1392737984',
+        'is_deleted' => '0',
+        'created' => '1392737984',
+        'created_by' => NULL,
+        'modified' => '1395246869',
+        'modified_by' => NULL,
+    ),
+    'AdminUser_2' => array(
+        'id' => '2',
+        'email' => 'your@email.here',
+        'password' => '$2a$13$NLcoaXq5E7ZNNKIMRuPn2OQDII234DSAdeed71PxQ4PoDaw.PdKPxW',
+        'name' => 'Your Name',
+        'status' => '1',
+        'login_attempts' => '0',
+        'locked_until' => '0',
+        'pass_created' => '1392737984',
+        'is_deleted' => '0',
+        'created' => '1392737984',
+        'created_by' => NULL,
+        'modified' => '1395246869',
+        'modified_by' => NULL,
+    ),
+);
