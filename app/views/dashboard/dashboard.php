@@ -2,10 +2,10 @@
     <div id="nav-main"> <!-- Start #nav-main -->
         <ul>
             <li class="active"><a href="<?= $this->createUrl('/dashboard'); ?>">Startseite</a></li>
-            <li><a href="#">Kundenaccounts</a></li>
-            <li><a href="#">Nutzer</a></li>
-            <li><a href="#">PAYMEY-Konten</a></li>
-            <li><a href="#">Transaktionen</a></li>
+            <li><a href="<?= $this->createUrl('/account'); ?>">Kundenaccounts</a></li>
+            <li><a href="<?= $this->createUrl('/user'); ?>">Nutzer</a></li>
+            <li><a href="<?= $this->createUrl('/paymeyaccount'); ?>">PAYMEY-Konten</a></li>
+            <li><a href="<?= $this->createUrl('/transaction/index', array('Transaction_sort' => 'created.desc')); ?>">Transaktionen</a></li>
             <li><a href="<?= $this->createUrl('/default/logout'); ?>">Abmelden</a></li>
         </ul>
     </div>

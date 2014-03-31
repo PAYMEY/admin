@@ -8,12 +8,6 @@ class DashboardController extends AdminController
 	 */
     public function actionIndex()
 	{
-		//echo 'dashboard<br>';
-        //echo '<a href="/default/logout">logout</a><br>';
-        //print_r($_GET);
-
-        //$openTransactions = Transaction::model()->findAllByAttributes(array('status' => Transaction::STATUS_PENDING));
-
         // List of transactions
         $criteria = new CDbCriteria(array(
             //'condition' => 't.status=' . Transaction::STATUS_PENDING,
@@ -25,9 +19,10 @@ class DashboardController extends AdminController
                 'transactionDetails' => array('condition'=>'transactionDetails.transaction_type_id=5'))
         ));
         $transactionDataProvider = new CActiveDataProvider('Transaction', array(
+            /*
             'pagination' => array(
                 'pageSize' => 20,
-            ),
+            ),*/
             'criteria' => $criteria,
         ));
 

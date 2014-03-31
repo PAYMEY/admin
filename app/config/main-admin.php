@@ -109,6 +109,10 @@ return CMap::mergeArray(
                 'enableCsrfValidation' => true,
                 'enableCookieValidation' => true,
             ),
+            
+            'fixture'=>array(
+                'class'=>'system.test.CDbFixtureManager',
+            ),
 
         ),
     )
