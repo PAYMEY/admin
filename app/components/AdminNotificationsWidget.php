@@ -10,8 +10,19 @@ class AdminNotificationsWidget extends CWidget
         $data = array();
 
         foreach (Yii::app()->user->getFlashes() as $key => $message) {
+            switch ($key) {
+                case 'error':
+                    $class = 'error';
+                    break;
+                case 'success':
+                    $class = 'success';
+                    break;
+                default:
+                    $class = 'notice';
+                    break;
+            }
             $data[] = array(
-                'class' => 'success',
+                'class' => $class,
                 'message' => $message
             );
         }

@@ -36,6 +36,7 @@ h4 a { font-size: 14px; line-height: inherit; color: #059bb9; }
 h5 { font-size: 13px; background: transparent; padding: 0; color: #666; line-height: inherit; margin: 0; }
 h5 a { font-size: 13px; line-height: inherit; color: #059bb9; }
 
+.strong { font-weight: bold; }
 
 /* Fundamental Classes and IDs
 ===============================================*/
@@ -65,6 +66,8 @@ h5 a { font-size: 13px; line-height: inherit; color: #059bb9; }
 #nav-main ul ul a { padding: 6px 12px 6px 36px; border-bottom: 1px dotted #ccc; background: #e7e7e7; }
 #nav-main ul ul li.active a { color: #059BB9; background: #f5f5f5; box-shadow: 0 0; }
 
+#nav-main ul li ul { display:none; }
+#nav-main ul li.active ul { display: inherit; }
 
 /* Context navigation
 ===============================================*/
@@ -146,6 +149,7 @@ tr:hover { background-color: #f8f8f8; }
 .tablestyle1 td:first-child, .tablestyle1 th:first-child { padding-left: 12px; width: 26px; }
 .tablestyle1 td:last-child, .tablestyle1 th:last-child { padding-left: 12px; width: 39px; }
 .tablestyle1 th, .tablestyle1 td { padding: 6px 0 6px 25px; height: 30px; }
+thead th, thead span { color: #059bb9; font-weight: bold; }
 
 /* Forms
 ===============================================*/
@@ -173,7 +177,7 @@ input[type="submit"].info:hover, input[type="reset"].info:hover { background: #2
 input[type="submit"].success, input[type="reset"].success { background-image: linear-gradient(to bottom, #bfdd27, #9cb51d); color: #fff; border-color: #9cb51d; }
 input[type="submit"].success:hover, input[type="reset"].success:hover { background: #9cb51d; }
 
-.error, .error input, .error select, .error label, .error input:focus { border-color: #cc3333; color: #cc3333; }
+.error, .error input, .error select, .error label, .error input:focus, .error span { border-color: #cc3333; color: #cc3333; }
 
 .row.fixed .col6 >input, .row.fixed .col6 >textarea { width: 20px; }
 .row.fixed .col8 >input, .row.fixed .col8 >textarea { width: 41px; }
@@ -354,14 +358,14 @@ th .dropdown >a { font-weight: bold; }
 
 /* Dialogs
 ===============================================*/
-.dialog { width: 520px; text-align: left; position: fixed; left: 50%; top: 20%; box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); margin: 0 0 0 -260px; background: #fff; border-radius: 4px; padding: 12px 0; z-index: 100; cursor: default; visibility: hidden; }
+.dialog { width: 520px; text-align: left; position: fixed; left: 50%; top: 20%; box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); margin: 0 0 0 -260px; background: #fff; border-radius: 4px; padding: 12px 0; z-index: 100; cursor: default; display: none; }
 .dialog .header { margin: 0; padding: 0 12px 0 12px; border-bottom: 1px solid #eee; }
 .dialog .body { overflow: auto; max-height: 400px; padding: 12px; }
 .dialog .footer { margin: 0 0 -12px 0; padding: 12px; background: #f5f5f5; border-top: 1px solid #eee; }
 .dialog .footer .counter { float: right; margin-right: 10px; }
 .dialog.large { width: 840px; margin: 0 0 0 -420px; }
 
-#overlay { visibility: hidden; background: rgba(0,0,0,0.5); width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; z-index: 99; }
+#overlay { display: none; background: rgba(0,0,0,0.5); width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; z-index: 99; }
 
 /* Tabs
 ===============================================*/
@@ -445,6 +449,7 @@ th .dropdown >a { font-weight: bold; }
 .breadcrumb ul { margin: 0; list-style-type: none; }
 .breadcrumb li { float: left; display: inline-block; }
 .breadcrumb li:before { content: " /"; padding: 0 9px 0 0; color: #ccc; }
+.breadcrumb li:first-child:before { content: ""; padding: 0; }
 .breadcrumb a { border-radius: 4px; padding: 0; display: inline-block; font-size: 13px; margin: 0 9px 0 0; }
 .breadcrumb li.active a { padding: 1px 6px; background: #059bb9; color: #fff; }
 .breadcrumb h3 { float: left; font-size: 13px; margin: 0 9px 0 0; color: #aaa; }

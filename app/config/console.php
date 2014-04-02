@@ -8,26 +8,26 @@
 
 define('DS', '/' /*DIRECTORY_SEPARATOR*/);
 
-if (!file_exists(dirname(__FILE__) . '/webapp/_params.php')) {
+if (!file_exists(dirname(__FILE__) . '/admin/_params.php')) {
     die('missed "_params.php" - see "_params.php.default"');
 }
-if (!file_exists(dirname(__FILE__) . '/webapp/_db.php')) {
+if (!file_exists(dirname(__FILE__) . '/admin/_db.php')) {
     die('missed "_db.php" - see "_dp.php.default"');
 }
-if (!file_exists(dirname(__FILE__) . '/webapp/_modules.php')) {
+if (!file_exists(dirname(__FILE__) . '/admin/_modules.php')) {
     die('missed "_modules.php" - see "_modules.php.default"');
 }
-if (!file_exists(dirname(__FILE__) . '/webapp/_routes.php')) {
+if (!file_exists(dirname(__FILE__) . '/admin/_routes.php')) {
     die('missed "_routes.php" - see "_routes.php.default"');
 }
-if (!file_exists(dirname(__FILE__) . '/webapp/_emails.php')) {
+if (!file_exists(dirname(__FILE__) . '/admin/_emails.php')) {
     die('missed "_emails.php" - see "_emails.php.default"');
 }
 
-$pre_config = CMap::mergeArray(require (dirname(__FILE__) . '/webapp/_params.php'), require (dirname(__FILE__) . '/webapp/_db.php'));
-$pre_config = CMap::mergeArray($pre_config, require (dirname(__FILE__) . '/webapp/_modules.php'));
-$pre_config = CMap::mergeArray($pre_config, require (dirname(__FILE__) . '/webapp/_routes.php'));
-$pre_config = CMap::mergeArray($pre_config, require (dirname(__FILE__) . '/webapp/_emails.php'));
+$pre_config = CMap::mergeArray(require (dirname(__FILE__) . '/admin/_params.php'), require (dirname(__FILE__) . '/admin/_db.php'));
+$pre_config = CMap::mergeArray($pre_config, require (dirname(__FILE__) . '/admin/_modules.php'));
+$pre_config = CMap::mergeArray($pre_config, require (dirname(__FILE__) . '/admin/_routes.php'));
+$pre_config = CMap::mergeArray($pre_config, require (dirname(__FILE__) . '/admin/_emails.php'));
 
 return CMap::mergeArray(
     $pre_config,
@@ -45,9 +45,11 @@ return CMap::mergeArray(
         // autoloading model and component classes
         'import' => array(
             'application.models.*',
+            'application.adminModels.*',
             'application.components.*',
             'application.components.utils.*',
             'application.extensions.awt.*',
+            'application.extensions.awt.libs.*',
             'application.extensions.awt.db.*',
             'application.extensions.awt.db.ar.*',
             'ext.YiiMailer.YiiMailer',

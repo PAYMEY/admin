@@ -1,20 +1,9 @@
+<?php
+/* @var $transactionDataProvider CActiveDataProvider */
+?>
 <div id="cnt-col1"> <!-- Start #cnt-col1 -->
     <div id="nav-main"> <!-- Start #nav-main -->
-        <ul>
-            <li><a href="<?= $this->createUrl('/dashboard'); ?>">Startseite</a></li>
-            <li><a href="<?= $this->createUrl('/account'); ?>">Kundenaccounts</a></li>
-            <li><a href="<?= $this->createUrl('/user'); ?>">Nutzer</a></li>
-            <li><a href="<?= $this->createUrl('/paymeyaccount'); ?>">PAYMEY-Konten</a></li>
-            <li class="active">
-                <a href="<?= $this->createUrl('/transaction/index', array('Transaction_sort' => 'created.desc')); ?>">Transaktionen</a>
-                <ul>
-                    <li><a href="<?= $this->createUrl('/transaction/index', array('status' => Transaction::STATUS_PENDING)); ?>">Offene Transaktionen anzeigen</a></li>
-                    <li><a href="<?= $this->createUrl('/transaction/index', array('status' => Transaction::STATUS_FAILED)); ?>">Abgebrochene Transaktionen anzeigen</a></li>
-                    <li><a href="<?= $this->createUrl('/transaction/index', array('status' => Transaction::STATUS_APPROVED)); ?>">Abgeschlossene Transaktionen anzeigen</a></li>
-                </ul>
-            </li>
-            <li><a href="<?= $this->createUrl('/default/logout'); ?>">Abmelden</a></li>
-        </ul>
+        <?php $this->widget('AdminMenuWidget'); ?>
     </div>
     <!-- End #nav-main -->
 </div> <!-- End #cnt-col1 -->

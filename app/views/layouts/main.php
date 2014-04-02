@@ -15,7 +15,7 @@
     Yii::app()->clientScript->registerScriptFile('/js/lib/jquery/jquery-ui.custom.min.js');
     Yii::app()->clientScript->registerScriptFile('/admin/js/lib/tipsy.js');
     //Yii::app()->clientScript->registerScriptFile('/js/lib/modernizr.js');
-    //Yii::app()->clientScript->registerScriptFile('/js/com.paymey.js');
+    Yii::app()->clientScript->registerScriptFile('/admin/js/com.paymey.admin.js');
 ?>
 
     <title>PAYMEY Admin</title>

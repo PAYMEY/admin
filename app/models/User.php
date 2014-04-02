@@ -31,8 +31,22 @@
  */
 class User extends CActiveRecordExtended
 {
+    const STATUS_BLOCKED = -1;
     const STATUS_PENDING = 0;
     const STATUS_APPROVED = 1;
+
+    /*
+     *
+     */
+    public function delete($deleteRelated = false)
+    {
+        // check if the user is not the account owner!
+        if ($this->account->owner_id == $this->id) {
+            $this->addError('is_deleted', Yii::t('models', 'user.message-error-user-cannot-be-deleted'));
+            return false;
+        }
+        return parent::delete($deleteRelated);
+    }
 
     /**
      * generate the activation Link
